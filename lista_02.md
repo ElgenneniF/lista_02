@@ -253,6 +253,16 @@ ______
 
 **7)** Implemente o pseudocódigo para o algoritmo representado no fluxograma da imagem.
 ![Uma imagem](assets/image.png)
+```
+inicio
+    prompt {coloque sua idade}
+    se resposta < 16
+       escrever "não pode votar"
+    senão se resposta < 18
+       escrever "o voto é opcional"
+    senão 
+        escrever "o voto é obrigatório"
+```
 ______
 
 **8)** Considere a implementação da classe base FormaGeometrica em um sistema de modelagem de formas geométricas. Sua tarefa é implementar, utilizando pseudocódigo, as classes derivadas Retangulo e Circulo, que herdam da classe FormaGeometrica, adicionando atributos específicos e métodos para calcular a área de um retângulo e de um círculo, respectivamente.
@@ -269,7 +279,27 @@ Classe FormaGeometrica:
         # Implementação genérica para cálculo de área, a ser sobrescrita pelas subclasses.
 
 ```
+Resposta:
+```
+nova classe retangulos herda FormaGeometricas
+    caracteristicas de retangulos   
+        angulos internos = 90°
+        lado a = lado c = lado 1
+        lado b = lado d = lado 2
+    metodos de retangulos
+        CalcularArea(): lado 1 . lado 2
+        escrever resultado de CalcularArea
 
+nova classe circulo herda FormaGeometricas
+    caracteristicas de circulo  
+        raio = x
+        angulos internos = null
+
+    metodos de circulo
+        CalcularArea(): pi . raio^2
+        escrever resultado de CalcularArea
+
+```
 ______
 
 **9)** Você foi contratado(a) como estagiário(a) da Tesla e está participando do desenvolvimento de um programa para simular o desempenho de um carro elétrico em uma corrida. Seu objetivo é determinar em quantos minutos o carro levará para completar uma determinada distância, levando em consideração uma velocidade inicial e uma taxa de aceleração constante. No entanto, você deseja garantir que o carro não exceda uma velocidade máxima nem que a corrida demore mais do que um tempo máximo. Implemente a lógica dessa simulação em pseudocódigo.
@@ -277,6 +307,39 @@ ______
 Considere a fórumla de atualização velocidade:
 ```
     velocidade = velocidadeInicial + aceleracao*tempo
+```
+```
+Função simularCorrida(distancia, velocidadeMaxima)
+    velocidadeInicial = 0
+    aceleracao = 1
+    velocidade = 0
+    tempo = 0
+    tempoMaximo = 120 + (distancia / velocidadeMaxima)  # tempo máximo em segundos
+
+    Enquanto True:
+        contador()
+        
+        Se tempo > tempoMaximo:
+            Retornar "Tempo máximo excedido"
+
+        Se velocidade < velocidadeMaxima:
+            acelerar()
+        Senão:
+            Avisar "Não pode passar da velocidade máxima"
+            Retornar
+
+        Se (velocidade * tempo) >= distancia:
+            Retornar tempo
+
+Função acelerar()
+    velocidade = velocidadeInicial + aceleração
+    velocidadeInicial = velocidade
+
+Função contador()
+    tempo = tempo + 1
+
+Inicio da corrida
+    simularCorrida(x, y)  # onde x é a distância em metros e y é a velocidade máxima em m/s
 ```
 
 ______
