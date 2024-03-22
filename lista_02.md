@@ -309,6 +309,7 @@ Considere a fórumla de atualização velocidade:
 ```
     velocidade = velocidadeInicial + aceleracao*tempo
 ```
+Resposta:
 ```
 Função simularCorrida(distancia, velocidadeMaxima)
     velocidadeInicial = 0
@@ -372,6 +373,7 @@ matrizSoma <- SomaDeMatrizes(matrizA, matrizB)
 Escrever("Soma das matrizes:")
 ImprimirMatriz(matrizSoma)
 ```
+Resposta:
 ```
 função multiplicaçãoMatrizes(matrizA, matrizB)
  # verifica se (quantidade de linhas da matrizA = quantidade de colunas da matrizB)
